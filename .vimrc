@@ -85,6 +85,7 @@ nnoremap <C-Right> <C-W><C-L>
 " MISC                                               "
 " ================================================== "
 set encoding=utf-8
+set laststatus=2
 set clipboard=unnamedplus
 set number
 " Jump to the last position when reopening a file

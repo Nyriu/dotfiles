@@ -143,3 +143,9 @@ alias rm="echo Use 'del', or the full path i.e. '/bin/rm'"
 alias del="trash-put"
 
 
+# Applications shortcuts
+e() { evince "@" &}
+z() { nohup zathura "@" &>/dev/null &}
+v() { nohup viewnior "@" &>/dev/null &}
+
+
