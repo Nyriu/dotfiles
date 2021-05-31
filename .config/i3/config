@@ -47,7 +47,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -173,22 +173,48 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+
+# TODO
+## Colors
+#set $bg-color            #2f343f
+#set $inactive-bg-color   #2f343f
+#set $text-color          #f3f4f5
+#set $inactive-text-color #676E7D
+#set $urgent-bg-color     #E53935  
+#set $indicator-color     #00ff00
+#                                  
+## windows colors                  
+##                       border              background          text                 indicator
+#client.focused          $bg-color           $bg-color           $text-color          $indicator-color
+#client.unfocused        $inactive-bg-color  $inactive-bg-color  $inactive-text-color $indicator-color
+#client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color $indicator-color
+#client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color          $indicator-color
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
 	i3bar_command i3bar
 	status_command i3status
 	position bottom
+	#TODO
+	#colors {
+	#	backgound $bg-color
+	#	separator #757575
+	#	#                  border              background          text
+	#	focused_workspace  $bg-color           $bg-color           $text-color
+	#	inactive_workspace $inactive-bg-color  $inactive-bg-color  $inactive-text-color
+	#	urgent_workspace   $urgent-bg-color    $urgent-bg-color    $text-color
+	#}
 }
 
 
 # Border
 new_window pixel 1
 #new_float normal
-## Change border type
+# Change border type
 #bindsym $mod+u border none
-#bindsym $mod+y border pixel 1
-#bindsym $mod+n border normal
+bindsym $mod+y border pixel 1
+bindsym $mod+n border normal
 
 # Gaps
 gaps inner 10
@@ -202,6 +228,7 @@ bindsym $mod+F2 exec pcmanfm
 bindsym $mod+F3 exec chromium
 
 for_window [class="Chromium"] number $w1
+for_window [class="chromium"] number $w1
 
 
 # Image Visualizer
@@ -237,6 +264,11 @@ exec setxkbmap it
 
 # Startup Programs or services
 exec chromium
+exec_always nitrogen --restore
+# here xrandr stuff TODO
+
+
+
 
 ################## BELOW WIP or Experimentig stuff
 #bindsym $mod+shift+x exec i3lock

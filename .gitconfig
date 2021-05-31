@@ -1,0 +1,14 @@
+[user]
+	email = muninitristano@gmail.com
+	name = Nyriu
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
+
