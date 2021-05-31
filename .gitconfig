@@ -12,3 +12,5 @@
 [init]
 	defaultBranch = main
 
+[core]
+	editor = /usr/bin/vim

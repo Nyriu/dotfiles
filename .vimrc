@@ -85,7 +85,6 @@ nnoremap <C-Right> <C-W><C-L>
 " MISC                                               "
 " ================================================== "
 set encoding=utf-8
-"set mouse=a
 set clipboard=unnamedplus
 set number
 " Jump to the last position when reopening a file
@@ -112,10 +111,14 @@ set tabstop=2
 set shiftwidth=2
 set expandtab " spaces instead of tabs
 
+set mouse=a
+" Fix mouse issues with Alacritty
+set ttymouse=sgr
+
 
 " Spelling
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=it,en_US
-autocmd FileType gitcommit setlocal spell spelllang=it,en_US
+"autocmd FileType gitcommit setlocal spell spelllang=it,en_US
 " C-L corrects previous spelling mistake
 inoremap <C-L> <C-G>u<Esc>[s1z=`]a<C-G>u
 
