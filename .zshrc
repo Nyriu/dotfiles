@@ -78,6 +78,7 @@ ZSH_THEME="agnoster"
 plugins=(
   git
   vi-mode
+  last-working-dir
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -147,5 +148,12 @@ alias del="trash-put"
 e() { evince "@" &}
 z() { nohup zathura "@" &>/dev/null &}
 v() { nohup viewnior "@" &>/dev/null &}
+
+
+# Directories Aliases
+alias uni="cd ~/Documents/Uni/QuintoAnno"
+alias formi="cd ~/Documents/Uni/QuintoAnno/ProgrArchParall"
+alias geom="cd ~/Documents/Uni/QuintoAnno/GeomComput"
+alias rt="cd ~/Documents/Uni/QuintoAnno/Tirocinio3D/RayTracer"
 
 

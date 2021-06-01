@@ -34,6 +34,7 @@ Plugin 'scrooloose/nerdtree'
 "Plugin 'lervag/vimtex'
 "Plugin 'jistr/vim-nerdtree-tabs'
 "Plugin 'tpope/vim-fugitive'
+"Plugin 'powerline/powerline'
 
 
 " All of your Plugins must be added before the following line
@@ -88,6 +89,7 @@ set encoding=utf-8
 set laststatus=2
 set clipboard=unnamedplus
 set number
+
 " Jump to the last position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -107,6 +109,11 @@ inoremap <silent> <C-S> <C-O>:update<CR><esc>
 
 syntax on
 filetype plugin indent on
+
+"hi Visual term=reverse cterm=reverse guibg=Blue
+"hi Visual cterm=NONE ctermbg=0 ctermfg=NONE guibg=Grey40
+hi Visual cterm=none ctermbg=darkgrey ctermfg=cyan
+
 
 set tabstop=2
 set shiftwidth=2
@@ -135,6 +142,5 @@ au FileType tex syntax on
 " CPP
 autocmd FileType cpp
   \ nnoremap <F5> :w!<CR>:!./run.sh<CR> |
-
 
 
