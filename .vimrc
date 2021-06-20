@@ -31,7 +31,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'lervag/vimtex'
+" unfocus NERD_tree when opening new buffer
+Plugin 'baopham/vim-nerdtree-unfocus'
+
+Plugin 'lervag/vimtex'
 "Plugin 'jistr/vim-nerdtree-tabs'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'powerline/powerline'
@@ -59,7 +62,10 @@ filetype plugin indent on    " required
 let g:ycm_autoclose_preview_window_after_completion=1
 "let g:ycm_filetype_whitelist={}
 "let g:ycm_filetype_blacklist={}
-
+"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_compilation_database_folder = './build'
+let g:ycm_extra_conf_vim_data = [ 'g:ycm_compilation_database_folder' ]
+"
 
 " ================================================== "
 " NERDTree
@@ -100,7 +106,7 @@ endif
 set foldmethod=indent
 set foldlevel=99
 " Fold with spacebar
-" nnoremap <space> za
+nnoremap <space> za
 
 " Save file with C-S
 noremap <silent> <C-S> :update<CR><esc>
@@ -110,10 +116,10 @@ inoremap <silent> <C-S> <C-O>:update<CR><esc>
 syntax on
 filetype plugin indent on
 
+" highlightning colors " highly WIP
 "hi Visual term=reverse cterm=reverse guibg=Blue
 "hi Visual cterm=NONE ctermbg=0 ctermfg=NONE guibg=Grey40
 hi Visual cterm=none ctermbg=darkgrey ctermfg=cyan
-
 
 set tabstop=2
 set shiftwidth=2
@@ -125,19 +131,21 @@ set ttymouse=sgr
 
 
 " Spelling
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=it,en_US
-"autocmd FileType gitcommit setlocal spell spelllang=it,en_US
+"set spell
+"filetype on
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=it,en_us
+"autocmd FileType gitcommit setlocal spell spelllang=it,en_us
 " C-L corrects previous spelling mistake
 inoremap <C-L> <C-G>u<Esc>[s1z=`]a<C-G>u
 
 " Latex
-autocmd FileType tex setlocal spell spelllang=it,en_US
+autocmd FileType tex setlocal spell spelllang=it,en_us
 au BufRead,BufNewFile *.tex,*.sty,*.cls set filetype=tex
 au FileType tex syntax on
 "au filetype tex syntax region texZone start='\\begin{lstlisting}' end='\\end{lstlisting}'
-"g:tex_flavor = "latex"
-"g:vimtex_view_general_viewer = "zathura"
-"g:netrw_browserx_viewer="setsid xdg-open"
+let g:tex_flavor = "latex"
+"let g:vimtex_view_general_viewer = "zathura"
+"let g:netrw_browserx_viewer="setsid xdg-open"
 
 " CPP
 autocmd FileType cpp

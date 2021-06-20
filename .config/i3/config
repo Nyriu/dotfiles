@@ -234,7 +234,7 @@ bindsym $mod+n border normal
 
 # Gaps
 gaps inner 10
-gaps outer 0
+gaps outer -2
 smart_gaps on
 smart_borders on
 
@@ -250,6 +250,7 @@ assign [class="chromium"] 1
 # Image Visualizer
 # Open in float
 for_window [title="Viewnior"] floating enable border pixel 1
+for_window [title="GLFW Window"] floating enable border normal
 
 
 ## Special Keyboard Keys
@@ -280,7 +281,8 @@ exec setxkbmap it
 
 # Startup Programs or services
 exec chromium
-exec --no-startup-id nitrogen --restore; picom -b
+exec --no-startup-id nitrogen --restore; picom -b --config ~/.config/picom.conf
+#exec_always --no-startup-id conky
 # here xrandr stuff TODO
 
 

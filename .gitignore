@@ -9,6 +9,10 @@
 .config/gtk-3.0
 .config/libfm
 .config/menus
+
+.config/Microsoft
+.config/teams
+
 .config/mimeapps.list
 .config/nitrogen
 .config/pavucontrol.ini
@@ -18,6 +22,9 @@
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .config/viewnior
+.config/vlc
+.config/GIMP
+.config/conky
 
 
 Desktop
@@ -28,6 +35,9 @@ Downloads
 .git
 .git-credentials
 .gnome
+
+.gtk-bookmarks
+
 .histfile
 .icons
 inutile.txt
