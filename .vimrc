@@ -60,12 +60,25 @@ filetype plugin indent on    " required
 " YouCompleteMe ~ YCM                                "
 " ================================================== "
 let g:ycm_autoclose_preview_window_after_completion=1
-"let g:ycm_filetype_whitelist={}
+"let g:ycm_filetype_whitelist={
+"      \ "c":1,
+"      \ "cpp":1,
+"      \ "sh":1,
+"      \ "python":1,
+"      \ "py":1,
+"      \ }
 "let g:ycm_filetype_blacklist={}
-"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:ycm_compilation_database_folder = './build'
-let g:ycm_extra_conf_vim_data = [ 'g:ycm_compilation_database_folder' ]
-"
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+"let g:ycm_compilation_database_folder = './build'
+"let g:ycm_extra_conf_vim_data = [ 'g:ycm_compilation_database_folder' ]
+let g:ycm_confirm_extra_conf = 0 " turn off question
+
+" Not necessary, fixed with appropriate ycm_extra_conf
+"" CUDA
+"" Map cuda files to c++ so that Ycm can parse
+""autocmd BufNewFile,BufRead *.cu set filetype=cpp
+""let g:ycm_semantic_triggers={'c,cpp,python,cuda': ['re!\w{2}'] }
+
 
 " ================================================== "
 " NERDTree
@@ -133,7 +146,7 @@ set ttymouse=sgr
 " Spelling
 "set spell
 "filetype on
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=it,en_us
+autocmd BufRead,BufNewFile *.md,*.txt setlocal spell spelllang=it,en_us
 "autocmd FileType gitcommit setlocal spell spelllang=it,en_us
 " C-L corrects previous spelling mistake
 inoremap <C-L> <C-G>u<Esc>[s1z=`]a<C-G>u

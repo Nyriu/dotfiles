@@ -45,6 +45,7 @@ inutile.txt
 .local
 Music
 .nvidia-settings-rc
+.nv
 .oh-my-zsh
 Pictures
 .pki
@@ -52,7 +53,12 @@ Public
 Templates
 tmp.tmp
 Videos
-.vim
+
+.vim/bundle
+.vim/OLD.ycm_extra_conf.py
+.vim/spell
+.vim/.netrwhist
+
 .viminfo
 .Xauthority
 .xsession-errors

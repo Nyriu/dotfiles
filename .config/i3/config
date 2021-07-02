@@ -245,15 +245,18 @@ bindsym $mod+F3 exec chromium
 
 assign [class="Chromium"] 1
 assign [class="chromium"] 1
+assign [class="Pavucontrol"] 8
 
 
 # Image Visualizer
 # Open in float
 for_window [title="Viewnior"] floating enable border pixel 1
-for_window [title="GLFW Window"] floating enable border normal
+#for_window [title="GLFW Window"] floating enable border normal
+for_window [title="GLFW Window"] floating enable
 
 
 ## Special Keyboard Keys
+bindsym Print exec scrot $HOME/Pictures/Screens/`date +%Y-%m-%d_%H:%M:%S`.png
 
 ## Pulse Audio controls
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
