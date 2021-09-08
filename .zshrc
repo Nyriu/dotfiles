@@ -96,7 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR='mvim'
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -145,15 +145,21 @@ alias del="trash-put"
 
 
 # Applications shortcuts
-e() { evince "@" &}
-z() { nohup zathura "@" &>/dev/null &}
-v() { nohup viewnior "@" &>/dev/null &}
+# TODO
+#e() { evince "@" &}
+#z() { nohup zathura "@" &>/dev/null &}
+#v() { nohup viewnior "@" &>/dev/null &}
 
 
 # Directories Aliases
 alias uni="cd ~/Documents/Uni/QuintoAnno"
+alias unimai="cd ~/Documents/Unimai"
 alias formi="cd ~/Documents/Uni/QuintoAnno/ProgrArchParall"
 alias geom="cd ~/Documents/Uni/QuintoAnno/GeomComput"
 alias rt="cd ~/Documents/Uni/QuintoAnno/Tirocinio3D/RayTracer"
+alias rtcuda="cd ~/Documents/Uni/QuintoAnno/ProgrArchParall/CUDA_RayTracer"
+alias tesi="cd ~/Documents/Uni/QuintoAnno/Tesi/2021_08_03_Assignment/"
+
+alias ttrpg="cd ~/Documents/TTRPG/ArsMagica"
 
 

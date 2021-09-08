@@ -39,6 +39,9 @@ Plugin 'lervag/vimtex'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'powerline/powerline'
 
+Plugin 'jpalardy/vim-slime'
+Plugin 'hanschen/vim-ipython-cell'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -159,9 +162,24 @@ au FileType tex syntax on
 let g:tex_flavor = "latex"
 "let g:vimtex_view_general_viewer = "zathura"
 "let g:netrw_browserx_viewer="setsid xdg-open"
+let g:vimtex_compiler_latexmk = { 
+      \ 'executable' : 'latexmk',
+      \ 'options' : [ 
+        \   '-xelatex',
+        \   '-file-line-error',
+        \   '-synctex=1',
+        \   '-interaction=nonstopmode',
+        \ ],
+        \}
 
 " CPP
 autocmd FileType cpp
   \ nnoremap <F5> :w!<CR>:!./run.sh<CR> |
+
+
+" Vim-Slime
+let g:slime_target = "vimterminal"
+let g:slime_vimterminal_cmd = "ipython"
+let g:slime_vimterminal_config = {"term_finish": "close"}
 
 

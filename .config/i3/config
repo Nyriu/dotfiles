@@ -243,9 +243,9 @@ bindsym $mod+F1 exec ranger
 bindsym $mod+F2 exec pcmanfm
 bindsym $mod+F3 exec chromium
 
-assign [class="Chromium"] 1
-assign [class="chromium"] 1
-assign [class="Pavucontrol"] 8
+#assign [class="Chromium"] 1
+#assign [class="chromium"] 1
+#assign [class="Pavucontrol"] 8
 
 
 # Image Visualizer
