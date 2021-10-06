@@ -42,6 +42,11 @@ Plugin 'lervag/vimtex'
 Plugin 'jpalardy/vim-slime'
 Plugin 'hanschen/vim-ipython-cell'
 
+"Debugger Plugins
+Plugin 'puremourning/vimspector'
+"Plugin 'szw/vim-maximizer'
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -162,6 +167,7 @@ au FileType tex syntax on
 let g:tex_flavor = "latex"
 "let g:vimtex_view_general_viewer = "zathura"
 "let g:netrw_browserx_viewer="setsid xdg-open"
+let g:netrw_browsex_viewer= "exec chromium" " TODO not working properly
 let g:vimtex_compiler_latexmk = { 
       \ 'executable' : 'latexmk',
       \ 'options' : [ 
@@ -172,14 +178,54 @@ let g:vimtex_compiler_latexmk = {
         \ ],
         \}
 
-" CPP
-autocmd FileType cpp
-  \ nnoremap <F5> :w!<CR>:!./run.sh<CR> |
-
 
 " Vim-Slime
 let g:slime_target = "vimterminal"
 let g:slime_vimterminal_cmd = "ipython"
 let g:slime_vimterminal_config = {"term_finish": "close"}
 
+" Git
+if &diff
+  "syntax off
+  colorscheme elflord
+  "colorscheme evening
+  "highlight! link DiffText MatchParen
 
+  "hi DiffAdd      ctermfg=NONE          ctermbg=Green
+  "hi DiffChange   ctermfg=NONE          ctermbg=NONE
+  "hi DiffDelete   ctermfg=LightBlue     ctermbg=Red
+  "hi DiffText     ctermfg=Yellow        ctermbg=Red
+endif
+
+
+"" CPP
+"autocmd FileType cpp
+"  \ nnoremap <F5> :w!<CR>:!./run.sh<CR> | " in conflitto con vimspector
+
+
+
+" ################### Vimspector ###################
+let g:vimspector_enable_mappings='HUMAN'
+nnoremap <F1>       :VimspectorReset<CR>
+nmap <Leader>b <Plug>VimspectorBalloonEval
+xmap <Leader>b <Plug>VimspectorBalloonEval
+"nmap <Leader>h <Plug>VimspectorStepOut
+"nmap <Leader>j <Plug>VimspectorStepOver
+""nmap <Leader>j <Plug>VimspectorTO DECIDE
+"nmap <Leader>l <Plug>VimspectorStepInto
+
+""nnoremap <Leader>dd :call vimspector#Launch()<CR>
+""nnoremap <F5>       :call vimspector#Launch()<CR>
+"
+""nnoremap <F1>       :VimspectorReset<CR>
+""nnoremap <Leader>de :call vimspector#Reset()<CR>
+"nnoremap <Leader>dc :call vimspector#Continue()<CR>
+"
+"nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
+"nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+"
+""nmap <Leader>dk <Plug>VimspectorRestart
+""nmap <F4>       <Plug>VimspectorRestart
+"nmap <Leader>dh <Plug>VimspectorStepOut
+"nmap <Leader>dl <Plug>VimspectorStepInto
+"nmap <Leader>dj <Plug>VimspectorStepOver

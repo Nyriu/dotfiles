@@ -155,11 +155,13 @@ alias del="trash-put"
 alias uni="cd ~/Documents/Uni/QuintoAnno"
 alias unimai="cd ~/Documents/Unimai"
 alias formi="cd ~/Documents/Uni/QuintoAnno/ProgrArchParall"
-alias geom="cd ~/Documents/Uni/QuintoAnno/GeomComput"
-alias rt="cd ~/Documents/Uni/QuintoAnno/Tirocinio3D/RayTracer"
-alias rtcuda="cd ~/Documents/Uni/QuintoAnno/ProgrArchParall/CUDA_RayTracer"
-alias tesi="cd ~/Documents/Uni/QuintoAnno/Tesi/2021_08_03_Assignment/"
+#alias geom="cd ~/Documents/Uni/QuintoAnno/GeomComput"
+#alias svdag="cd ~/Documents/Uni/QuintoAnno/Algoritmi_Avanzati/slide"
+#alias rt="cd ~/Documents/Uni/QuintoAnno/Tirocinio3D/RayTracer"
+#alias rtcuda="cd ~/Documents/Uni/QuintoAnno/ProgrArchParall/CUDA_RayTracer"
+alias tesi="cd ~/Documents/Uni/QuintoAnno/Tesi/CUDA_RayTracer"
 
 alias ttrpg="cd ~/Documents/TTRPG/ArsMagica"
+alias gamedev="cd ~/Documents/Unimai/GameDev/Engines/Halley/halley"
 
 
