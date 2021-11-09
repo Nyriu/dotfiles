@@ -113,7 +113,7 @@ export EDITOR='vim'
 
 DEFAULT_USER=nyriu
 
-
+export PATH="$PATH:/home/nyriu/.local/bin:/home/nyriu/.local/share/gem/ruby/3.0.0/bin"
 
 
 # # Lines configured by zsh-newuser-install
@@ -159,7 +159,8 @@ alias formi="cd ~/Documents/Uni/QuintoAnno/ProgrArchParall"
 #alias svdag="cd ~/Documents/Uni/QuintoAnno/Algoritmi_Avanzati/slide"
 #alias rt="cd ~/Documents/Uni/QuintoAnno/Tirocinio3D/RayTracer"
 #alias rtcuda="cd ~/Documents/Uni/QuintoAnno/ProgrArchParall/CUDA_RayTracer"
-alias tesi="cd ~/Documents/Uni/QuintoAnno/Tesi/CUDA_RayTracer"
+alias tesi="cd ~/Documents/Uni/QuintoAnno/Tesi"
+alias web="cd ~/Documents/Unimai/websites/nyriu.github.io"
 
 alias ttrpg="cd ~/Documents/TTRPG/ArsMagica"
 alias gamedev="cd ~/Documents/Unimai/GameDev/Engines/Halley/halley"

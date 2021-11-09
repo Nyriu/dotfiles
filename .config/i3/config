@@ -90,9 +90,9 @@ bindsym $mod+q split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split # return to default (then toggle)
+#bindsym $mod+s layout stacking
+#bindsym $mod+t layout tabbed
+#bindsym $mod+e layout toggle split # return to default (then toggle)
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -248,11 +248,12 @@ bindsym $mod+F3 exec chromium
 #assign [class="Pavucontrol"] 8
 
 
-# Image Visualizer
 # Open in float
 for_window [title="Viewnior"] floating enable border pixel 1
 #for_window [title="GLFW Window"] floating enable border normal
 for_window [title="GLFW Window"] floating enable
+for_window [title="Arandr"] floating enable
+for_window [title="arandr"] floating enable
 
 
 ## Special Keyboard Keys

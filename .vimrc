@@ -38,6 +38,7 @@ Plugin 'lervag/vimtex'
 "Plugin 'jistr/vim-nerdtree-tabs'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'powerline/powerline'
+"Plugin 'tpope/vim-markdown'
 
 Plugin 'jpalardy/vim-slime'
 Plugin 'hanschen/vim-ipython-cell'
@@ -75,17 +76,17 @@ let g:ycm_autoclose_preview_window_after_completion=1
 "      \ "python":1,
 "      \ "py":1,
 "      \ }
-"let g:ycm_filetype_blacklist={}
-let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_filetype_blacklist={}
+"let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 "let g:ycm_compilation_database_folder = './build'
 "let g:ycm_extra_conf_vim_data = [ 'g:ycm_compilation_database_folder' ]
-let g:ycm_confirm_extra_conf = 0 " turn off question
+"let g:ycm_confirm_extra_conf = 0 " turn off question
+"let g:ycm_log_level='debug' " get verbose logs
 
-" Not necessary, fixed with appropriate ycm_extra_conf
-"" CUDA
-"" Map cuda files to c++ so that Ycm can parse
-""autocmd BufNewFile,BufRead *.cu set filetype=cpp
-""let g:ycm_semantic_triggers={'c,cpp,python,cuda': ['re!\w{2}'] }
+" CUDA
+" Map cuda files to c++ so that Ycm can parse
+"autocmd BufNewFile,BufRead *.cu set filetype=cpp
+"autocmd FileType cuda set ft=cuda.cpp
 
 
 " ================================================== "
@@ -154,6 +155,7 @@ set ttymouse=sgr
 " Spelling
 "set spell
 "filetype on
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.md,*.txt setlocal spell spelllang=it,en_us
 "autocmd FileType gitcommit setlocal spell spelllang=it,en_us
 " C-L corrects previous spelling mistake

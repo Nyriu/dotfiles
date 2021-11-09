@@ -14,3 +14,6 @@
 
 [core]
 	editor = /usr/bin/vim
+[color "diff"]
+	old = red normal bold
+	new = green normal bold
