@@ -39,13 +39,20 @@ Plugin 'lervag/vimtex'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'powerline/powerline'
 "Plugin 'tpope/vim-markdown'
+"Plugin 'Rykka/riv.vim'
+"Plugin 'instant-markdown/vim-instant-markdown'
+"Plugin 'iamcco/markdown-preview.nvim' 
 
-Plugin 'jpalardy/vim-slime'
-Plugin 'hanschen/vim-ipython-cell'
+"Plugin 'jpalardy/vim-slime'
+"Plugin 'hanschen/vim-ipython-cell'
 
 "Debugger Plugins
 Plugin 'puremourning/vimspector'
 "Plugin 'szw/vim-maximizer'
+
+
+"RDF Plugins
+"Plugin 'niklasl/vim-rdf'
 
 
 
@@ -131,9 +138,9 @@ set foldlevel=99
 nnoremap <space> za
 
 " Save file with C-S
-noremap <silent> <C-S> :update<CR><esc>
-vnoremap <silent> <C-S> <C-C>:update<CR><esc>
-inoremap <silent> <C-S> <C-O>:update<CR><esc>
+noremap <silent> <C-S> :w<CR><esc>
+vnoremap <silent> <C-S> <C-C>:w<CR><esc>
+inoremap <silent> <C-S> <C-O>:w<CR><esc>
 
 syntax on
 filetype plugin indent on
@@ -156,7 +163,7 @@ set ttymouse=sgr
 "set spell
 "filetype on
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-autocmd BufRead,BufNewFile *.md,*.txt setlocal spell spelllang=it,en_us
+autocmd BufRead,BufNewFile *.md,*.txt,*.rst setlocal spell spelllang=it,en_us
 "autocmd FileType gitcommit setlocal spell spelllang=it,en_us
 " C-L corrects previous spelling mistake
 inoremap <C-L> <C-G>u<Esc>[s1z=`]a<C-G>u
