@@ -96,7 +96,17 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR='vim'
+export EDITOR='nvim'
+alias vim=nvim
+
+# Fast edit dotfiles
+alias editvim='nvim ~/.config/nvim/init.vim'
+alias edvim='nvim ~/.config/nvim/init.vim'
+alias edv='nvim ~/.config/nvim/init.vim'
+
+alias editzsh='nvim ~/.zshrc'
+alias edzsh='nvim ~/.zshrc'
+alias edz='nvim ~/.zshrc'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -161,8 +171,19 @@ alias formi="cd ~/Documents/Uni/QuintoAnno/ProgrArchParall"
 #alias rtcuda="cd ~/Documents/Uni/QuintoAnno/ProgrArchParall/CUDA_RayTracer"
 alias tesi="cd ~/Documents/Uni/QuintoAnno/Tesi"
 alias web="cd ~/Documents/Unimai/websites/nyriu.github.io"
+alias cv="cd ~/Documents/CV"
+alias application="cd ~/Documents/Applications"
+alias preparation="cd ~/Documents/ApplicationPreparation"
 
 alias ttrpg="cd ~/Documents/TTRPG/ArsMagica"
-alias gamedev="cd ~/Documents/Unimai/GameDev/Engines/Halley/halley"
+alias hibernia="cd ~/Documents/TTRPG/ArsMagica/Hibernia"
+alias schism="cd ~/Documents/TTRPG/ArsMagica/SchismWar"
+#alias gamedev="cd ~/Documents/Unimai/GameDev/Engines/Halley/halley"
+alias gamedev="cd ~/Documents/Unimai/GameDev/Proof_of_a_GameDev"
+
+alias 3DPrinting="cd ~/Documents/Unimai/3DPrinting"
+alias armchar="cd ~/Documents/TTRPG/ArsMagica/WizardMakerProject/george/armchar"
+alias armchar-client="cd ~/Documents/TTRPG/ArsMagica/WizardMakerProject/george/armchar-client"
+
 
 

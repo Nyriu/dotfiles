@@ -254,10 +254,13 @@ for_window [title="Viewnior"] floating enable border pixel 1
 for_window [title="GLFW Window"] floating enable
 for_window [title="Arandr"] floating enable
 for_window [title="arandr"] floating enable
+for_window [title="Vulkan window"] floating enable
+#for_window [title="Vulkan"] floating enable
 
 
 ## Special Keyboard Keys
-bindsym Print exec scrot $HOME/Pictures/Screens/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym Print exec "IMG=$HOME/Pictures/Screens/`date +%Y-%m-%d_%H:%M:%S`.png; scrot $IMG; xclip -selection clipboard -t image/png $IMG;"
+bindsym --release $mod+Shift+S exec screen
 
 ## Pulse Audio controls
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -288,6 +291,7 @@ exec chromium
 exec --no-startup-id nitrogen --restore; picom -b --config ~/.config/picom.conf
 #exec_always --no-startup-id conky
 # here xrandr stuff TODO
+exec conky
 
 
 
