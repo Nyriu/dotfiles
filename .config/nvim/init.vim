@@ -41,3 +41,7 @@ set number
 set mouse=a
 "set ttymouse=sgr " Fix mouse issues with Alacritty
 
+" vim-maximizer " Default settings
+"nnoremap <silent><F3> :MaximizerToggle<CR>
+"vnoremap <silent><F3> :MaximizerToggle<CR>gv
+"inoremap <silent><F3> <C-o>:MaximizerToggle<CR>

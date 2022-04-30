@@ -102,11 +102,15 @@ alias vim=nvim
 # Fast edit dotfiles
 alias editvim='nvim ~/.config/nvim/init.vim'
 alias edvim='nvim ~/.config/nvim/init.vim'
-alias edv='nvim ~/.config/nvim/init.vim'
+alias edv='nvim -c "lcd ~/.config/nvim/" ~/.config/nvim/init.vim'
+alias edp='nvim -c "lcd ~/.config/nvim/" ~/.config/nvim/lua/plugins.lua'
+alias edc='nvim -c "lcd ~/.config/nvim/" ~/.config/nvim/lua/configs.lua'
 
 alias editzsh='nvim ~/.zshrc'
 alias edzsh='nvim ~/.zshrc'
 alias edz='nvim ~/.zshrc'
+
+alias notes='nvim ~/notes.md'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -187,3 +191,5 @@ alias armchar-client="cd ~/Documents/TTRPG/ArsMagica/WizardMakerProject/george/a
 
 
 
+
+[ -f "/home/nyriu/.ghcup/env" ] && source "/home/nyriu/.ghcup/env" # ghcup-env

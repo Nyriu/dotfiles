@@ -25,13 +25,17 @@ require('packer').startup(function()
 
   -- Git
   -- TODO
+  use 'lewis6991/gitsigns.nvim'
 
   -- Syntax
   -- TODO
-  -- use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/nvim-treesitter'
   -- use 'lewis6991/spellsitter.nvim'
 
   -- Markdown
-  use {"ellisonleao/glow.nvim", branch = 'main'}
+  use 'ellisonleao/glow.nvim'
+
+  -- Quality Of Life
+  use 'szw/vim-maximizer' -- maximize split windows and restore them <F3>
 
 end)

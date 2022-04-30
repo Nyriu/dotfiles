@@ -17,3 +17,8 @@ https://github.com/nvim-treesitter/nvim-treesitter
 https://github.com/chentau/marks.nvim
 
 https://github.com/lewis6991/gitsigns.nvim
+
+
+https://github.com/rafamadriz/neon
+
+https://github.com/nvim-neorg/neorg

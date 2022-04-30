@@ -1,19 +1,16 @@
 [user]
 	email = muninitristano@gmail.com
 	name = Nyriu
-[diff]
-	tool = vimdiff
-[merge]
-	tool = vimdiff
-[difftool]
-	prompt = false
 [credential]
 	helper = store
 [init]
 	defaultBranch = main
 
 [core]
-	editor = /usr/bin/vim
+	editor = /usr/bin/nvim
 [color "diff"]
 	old = red normal bold
 	new = green normal bold
+[safe]
+	directory = /mnt/D/DDocuments/TTRPG/ArsMagica/WizardMakerProject/george/armchar-client
+	directory = /mnt/D/DDocuments/TTRPG/ArsMagica/WizardMakerProject/george/armchar-swish
