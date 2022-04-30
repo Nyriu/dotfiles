@@ -230,3 +230,10 @@ require'nvim-treesitter.configs'.setup {
 -- TODO
 require('gitsigns').setup()
 
+
+-- ==================================================
+-- Quality Of Life
+-- ==================================================
+require('Comment').setup()
+
+

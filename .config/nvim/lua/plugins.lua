@@ -25,6 +25,9 @@ require('packer').startup(function()
 
   -- Git
   -- TODO
+  -- Plugin 'tpope/vim-fugitive'               " git
+  -- Plugin 'airblade/vim-gitgutter'           " git status line by line
+  -- Plugin 'git-time-metric/gtm-vim-plugin'   " Git Time Metrics
   use 'lewis6991/gitsigns.nvim'
 
   -- Syntax
@@ -37,5 +40,11 @@ require('packer').startup(function()
 
   -- Quality Of Life
   use 'szw/vim-maximizer' -- maximize split windows and restore them <F3>
+  use 'numToStr/Comment.nvim' -- smart and powerful commenting plugin for neovim
+
+  -- Web Dev
+  -- TODO
+  -- Plugin 'ap/vim-css-color'                 " highlight css colors
+  -- Plugin 'mattn/emmet-vim'                  " easy html and css
 
 end)

@@ -45,3 +45,30 @@ set mouse=a
 "nnoremap <silent><F3> :MaximizerToggle<CR>
 "vnoremap <silent><F3> :MaximizerToggle<CR>gv
 "inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
+
+" Jump to the last position when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
+
+" Enable folding
+" TODO on config.lua with treesitter
+" https://www.reddit.com/r/neovim/comments/kx2nnj/treesitter_and_folding/
+set foldmethod=indent
+set foldlevel=99 " TODO decide better
+" Fold with spacebar
+nnoremap <space> za
+
+
+" ================================================== "
+" SPELLING                                               "
+" ================================================== "
+""" TODO better
+"""set spell
+"""filetype on
+""au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+""autocmd BufRead,BufNewFile *.md,*.txt,*.rst setlocal spell spelllang=it,en_us
+"""autocmd FileType gitcommit setlocal spell spelllang=it,en_us
+""" C-L corrects previous spelling mistake
+""inoremap <C-L> <C-G>u<Esc>[s1z=`]a<C-G>u
