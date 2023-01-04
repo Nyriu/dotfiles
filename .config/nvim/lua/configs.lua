@@ -15,7 +15,7 @@ vim.api.nvim_set_keymap(
 -- ==================================================
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local lspconfig = require('lspconfig')
 -- lspconfig key mappings -- suggested in https://github.com/neovim/nvim-lspconfig#keybindings-and-completion
