@@ -32,8 +32,10 @@ end
 local servers = {
   'clangd',
   'rust_analyzer',
-  'pyright',
+  -- 'pyright',
+  -- 'pylsp',
   'tsserver',
+  'tailwindcss',
 }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -41,6 +43,51 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+-- Python lsp
+--vim.g.python3_host_prog = '/bin/python3'
+vim.g.python3_host_prog = '/usr/bin/python3'
+--vim.g.python3_host_prog = '/home/nyriu/.local/pipx/venvs/python-lsp-server/bin/python3'
+lspconfig.pylsp.setup({
+  on_attach = my_custom_on_attach,
+  capabilities = capabilities,
+  cmd = {"pylsp"},
+  root_dir = function(fname)
+    local root_files = {
+      'pyproject.toml',
+      'setup.py',
+      'setup.cfg',
+      'requirements.txt',
+      'Pipfile',
+      'PyModule',
+    }
+    return lspconfig.util.root_pattern(unpack(root_files))(fname) or lspconfig.util.find_git_ancestor(fname)
+  end,
+  --root_dir = lspconfig.util.find_git_ancestor,
+  settings = {
+    pylsp = {
+      configurationSources = {"pylint"},
+      plugins = {
+        pylint      = { enabled = false },
+        flake8      = { enabled = false },
+        pycodestyle = { enabled = false },
+        pyflakes    = { enabled = true },
+      }
+    }
+  }
+})
+--lspconfig.pyright.setup({ -- NOT use slow and CPU heavy
+--  on_attach = my_custom_on_attach,
+--  capabilities = capabilities,
+--  settings = {
+--    python = {
+--      analysis = {
+--        autoSearchPaths = true,
+--        diagnosticMode = "workspace",
+--        useLibraryCodeForTypes = true
+--      }
+--    }
+--  }
+--})
 -- Haskell lsp
 lspconfig.hls.setup({
   on_attach = my_custom_on_attach,

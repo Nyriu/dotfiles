@@ -65,10 +65,11 @@ nnoremap <space> za
 " SPELLING                                               "
 " ================================================== "
 """ TODO better
-"""set spell
-"""filetype on
-""au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-""autocmd BufRead,BufNewFile *.md,*.txt,*.rst setlocal spell spelllang=it,en_us
-"""autocmd FileType gitcommit setlocal spell spelllang=it,en_us
-""" C-L corrects previous spelling mistake
-""inoremap <C-L> <C-G>u<Esc>[s1z=`]a<C-G>u
+"set spell
+"filetype on
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+autocmd BufRead,BufNewFile *.md,*.txt,*.rst,*.tex setlocal spell spelllang=it,en_us
+autocmd FileType gitcommit setlocal spell spelllang=it,en_us
+" C-L corrects previous spelling mistake
+inoremap <C-L> <C-G>u<Esc>[s1z=`]a<C-G>u
+

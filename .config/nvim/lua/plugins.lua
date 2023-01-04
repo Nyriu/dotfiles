@@ -11,7 +11,6 @@ require('packer').startup(function()
 
   -- LSP
   use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
-  -- use 'neovim/nvim-lspinstall' -- conveniently install language servers
   -- use 'glepnir/lspsaga.nvim'
 
   -- Autocompletion
@@ -25,7 +24,7 @@ require('packer').startup(function()
 
   -- Git
   -- TODO
-  -- Plugin 'tpope/vim-fugitive'               " git
+  use 'tpope/vim-fugitive'
   -- Plugin 'airblade/vim-gitgutter'           " git status line by line
   -- Plugin 'git-time-metric/gtm-vim-plugin'   " Git Time Metrics
   use 'lewis6991/gitsigns.nvim'
@@ -37,6 +36,10 @@ require('packer').startup(function()
 
   -- Markdown
   use 'ellisonleao/glow.nvim'
+  use 'dhruvasagar/vim-table-mode'
+
+  -- Latex
+  use 'lervag/vimtex'
 
   -- Quality Of Life
   use 'szw/vim-maximizer' -- maximize split windows and restore them <F3>
