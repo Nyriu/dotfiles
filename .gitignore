@@ -29,6 +29,7 @@ bin/
 .config/impraxical/
 .config/inkscape/
 .config/libfm
+.config/libreoffice/
 .config/MangoHud/
 .config/menus
 .config/Microsoft
@@ -37,6 +38,8 @@ bin/
 .config/nordvpn/
 .config/NuGet/
 .config/NVIDIA Corporation/
+.config/nvim/plugin/packer_compiled.lua
+.config/nvim/spell/
 .config/pavucontrol.ini
 .config/pcmanfm
 .config/pdfarranger/
@@ -83,6 +86,8 @@ dwarffortress/
 .icons
 inutile.txt
 .ipython/
+.jupyter/
+.keras/
 LDocuments
 LDocuments*
 .lesshst
@@ -134,8 +139,7 @@ Videos
 .zcompdump
 .zcompdump-ArchNyriu-5.8
 .zcompdump-ArchNyriu-5.8.1
+.zcompdump-ArchNyriu-5.9
 .zoom/
 .zsh_history
 .zshrc.pre-oh-my-zsh
-
-.config/nvim/plugin/packer_compiled.lua
